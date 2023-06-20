@@ -7,6 +7,8 @@
     --dark-red:#A60000;
     --red:#C30000;
     --light-red:#FF0000;
+    --text-sm:1.2em;
+    --text-medium:1.6em
 }
 *
 {
@@ -16,6 +18,7 @@
 }
 body
 {
+    font-size: 62.5%;
     display: grid;
     height: 100vh;
     max-height: 750px;
@@ -23,12 +26,13 @@ body
     font-family: 'Poppins', sans-serif;
 
 }
+
 aside
 {
     color: white;
-    top: 0px;
     background: black;
     display: flex;
+    max-height: 750px;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -49,7 +53,7 @@ aside a
 }
 .aside__menu li
 {
-    
+    font-size: var(--text-medium);
     line-height: 55px;
 }
 .aside__links
@@ -74,10 +78,55 @@ aside a
     margin: 40px 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 10px;
+    
+  
 }
 .main__proyect-card img
 {
     width: 320px;
     height: 125px;
+}
+
+.about-me
+{
+    margin: 40px 40px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    max-height: 750px;
+}
+
+.about-me__presentacion 
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid var(--light-grey);
+}
+.about-me__presentacion h1
+{
+    font-weight: bold;
+}
+.about-me__presentacion p , .about-me__background p
+{
+    font-size: var(--text-sm);
+    margin-top: 10px;
+    text-align:justify; 
+    text-justify:auto;
+}
+.presentacion__description, .presentacion__imagen
+{
+    padding: 10px 10px;
+}
+
+.presentacion__imagen img
+{
+    width: 300px;
+    height: 300px;
+}
+.about-me__background
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
